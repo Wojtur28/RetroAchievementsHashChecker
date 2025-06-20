@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-source "$(dirname "${BASH_SOURCE[0]}")/../utils/hash_utils.sh"
+source "$UTILS_DIR/hash_utils.sh"
 
 ps2_hash() {
   local iso="$1"
