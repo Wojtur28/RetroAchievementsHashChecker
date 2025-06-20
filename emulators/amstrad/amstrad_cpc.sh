@@ -2,6 +2,8 @@
 set -e
 source "$UTILS_DIR/hash_utils.sh"
 
-pokemon_mini_hash() {
-  calc_md5 "$1"
+amstrad_hash() {
+  local disk="$1"
+
+  calc_md5 "$disk"
 }

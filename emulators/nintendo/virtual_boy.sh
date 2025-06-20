@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 set -e
 source "$UTILS_DIR/hash_utils.sh"
 

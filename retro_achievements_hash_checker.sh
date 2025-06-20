@@ -13,38 +13,15 @@ fi
 
 case "$emulator" in
 
-  atari2600) source "$EMUS_DIR/atari/atari2600.sh";                atari_hash        "$romfile" ;;
-  atari_jaguar) source "$EMUS_DIR/atari/atari_jaguar.sh";          atari_jaguar_hash "$romfile" ;;
+  amstrad|apple2|atari2600|atarijaguar|wonderswan|wonderswancolor|colecovision|channelf|vectrex|odyssey2|intellivision|msx|msx2|pc8001|pc8801|gameboy|gba|gbc|pokemon_mini|wasm4|supervision|megaduck|atari_jaguar|gameboy_advance|gameboy_color|virtual_boy)
+    calc_md5 "$romfile"
+    ;;
 
-  gameboy) source "$EMUS_DIR/nintendo/gameboy.sh";                 gameboy_hash      "$romfile" ;;
-  gameboy_advance) source "$EMUS_DIR/nintendo/gameboy_advance.sh"; gameboy_advance_hash "$romfile" ;;
-  gameboy_color) source "$EMUS_DIR/nintendo/gameboy_color.sh";     gameboy_color_hash "$romfile" ;;
-  pokemon_mini) source "$EMUS_DIR/nintendo/pokemon_mini.sh";       pokemon_mini_hash "$romfile" ;;
-  virtual_boy) source "$EMUS_DIR/nintendo/virtual_boy.sh";         virtual_boy_hash  "$romfile" ;;
+  3do) source "$EMUS_DIR/the3docompany/3do_interactive_multiplayer.sh"; 3do_interactive_multiplayer_hash "$romfile" ;;
 
   playstation) source "$EMUS_DIR/playstation/playstation.sh";      psx_hash          "$romfile" ;;
   playstation2) source "$EMUS_DIR/playstation/playstation2.sh";    ps2_hash          "$romfile" ;;
   playstation_portable) source "$EMUS_DIR/playstation/psp.sh";     psp_hash          "$romfile" ;;
-
-
-  wasm4) source "$EMUS_DIR/wasm4/wasm4.sh";                        wasm4_hash        "$romfile" ;;
-
-  supervision) source "$EMUS_DIR/watara/supervision.sh";           supervision_hash  "$romfile" ;;
-
-  megaduck) source "$EMUS_DIR/wellback/megaduck.sh";               megaduck_hash     "$romfile" ;;
-
-  wonderswan) source "$EMUS_DIR/bandai/wonderswan.sh";             wonderswan_hash   "$romfile" ;;
-  wonderswancolor) source "$EMUS_DIR/bandai/wonderswancolor.sh";   wonderswancolor_hash "$romfile" ;;
-
-  colecovision) source "$EMUS_DIR/coleco/colecovision.sh";         colecovision_hash "$romfile" ;;
-
-  channelf) source "$EMUS_DIR/fairchild/channelf.sh";              channelf_hash     "$romfile" ;;
-
-  vectrex) source "$EMUS_DIR/gce/vectrex.sh";                      vectrex_hash      "$romfile" ;;
-
-  odyssey2) source "$EMUS_DIR/magnavox/odyssey2.sh";               odyssey2_hash     "$romfile" ;;
-
-  intellivision) source "$EMUS_DIR/mattel/intellivision.sh";       intellivision_hash "$romfile" ;;
 
   *)
     echo "Emulator not supported: $emulator"
