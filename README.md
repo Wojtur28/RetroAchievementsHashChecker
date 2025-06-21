@@ -18,75 +18,101 @@ Supports a wide range of systems, including custom‐hash formats (PS1, PS2, PSP
 ## Usage
 
 ```bash
-./RetroAchievementsHashChecker.sh <emulator> <path/to/rom_or_iso>
+./retro_achievements_hash_checker.sh <emulator> <path/to/rom_or_iso>
 ```
 
 ```bash
-./RetroAchievementsHashChecker.sh ps1 "/isos/Final Fantasy VII (Europe).iso"
+./retro_achievements_hash_checker.sh ps1 "/isos/Final Fantasy VII (Europe).iso"
 ```
 
 ```bash
-./RetroAchievementsHashChecker.sh gamecube "/isos/Metroid Prime (USA).iso"
+./retro_achievements_hash_checker.sh gamecube "/isos/Metroid Prime (USA).iso"
 ```
 
-## Supported Emulators
+## Supported Emulators & Invocation
 
-### Plain MD5‐only systems
-- `amstrad` (Amstrad CPC)  
-- `apple2` (Apple II)  
-- `atari2600` (Atari 2600)  
-- `atarijaguar` (Atari Jaguar)  
-- `atar i_jaguar` (alternate key for Atari Jaguar)  
-- `wonderswan` (Bandai WonderSwan)  
-- `wonderswancolor` (Bandai WonderSwan Color)  
-- `colecovision` (ColecoVision)  
-- `channelf` (Fairchild Channel F)  
-- `vectrex` (GCE Vectrex)  
-- `odyssey2` (Magnavox Odyssey²)  
-- `intellivision` (Mattel Intellivision)  
-- `msx` (Microsoft MSX)  
-- `msx2` (Microsoft MSX2)  
-- `pc8001` (NEC PC-8001)  
-- `pc8801` (NEC PC-8801)  
-- `gameboy` (Nintendo Game Boy)  
-- `gba` (Game Boy Advance)  
-- `gameboy_advance` (alternate key for GBA)  
-- `gbc` (Game Boy Color)  
-- `gameboy_color` (alternate key for GBC)  
-- `pokemon_mini` (Pokémon Mini)  
-- `wasm4` (WASM-4)  
-- `supervision` (Watara Supervision)  
-- `megaduck` (Wellback Mega Duck)  
-- `virtual_boy` (Nintendo Virtual Boy)  
-
-### Systems with custom or header-aware hashes
-- **Atari 7800**: `atari7800`  
-- **Atari Lynx**: `atarilynx`  
-- **Atari Jaguar CD**: `atarijaguar_cd`  
-
-- **PC Engine / TurboGrafx-16 / SuperGrafx**:  
-  `pc_engine` / `turbo_grafx` / `super_grafx`  
-- **PC Engine CD / TurboGrafx-CD**:  
-  `pc_engine_cd` / `turbo_grafx_cd`  
-- **PC-FX**: `pc_fx`  
-
-- **Famicom Disk System**: `fds` / `famicom_disk_system`  
-
-- **NES / Famicom**: `nes` / `nintendo_entertainment_system`  
-- **SNES / Super Famicom**: `snes` / `super_nintendo_entertainment_system`  
-
-- **GameCube**: `gamecube`  
-- **Nintendo 64**: `n64` / `nintendo_64`  
-- **Nintendo DS**: `nds` / `nintendo_ds`  
-
-- **PlayStation 1**: `playstation`  
-- **PlayStation 2**: `playstation2`  
-- **PlayStation Portable (PSP)**: `playstation_portable`  
-
-- **Dreamcast**: `dreamcast` / `dc`  
-- **Saturn**: `saturn`  
-- **Sega CD**: `sega_cd`  
-
-- **Neo Geo CD**: `neo_geo_cd` / `neogeo_cd`  
-
-- **3DO Interactive Multiplayer**: `3do`  
+- **Amstrad CPC**  
+  `./retro_achievements_hash_checker.sh amstrad /path/to/game.dsk`
+- **Apple II**  
+  `./retro_achievements_hash_checker.sh apple2 /path/to/game.dsk`
+- **Atari 2600**  
+  `./retro_achievements_hash_checker.sh atari2600 /path/to/game.rom`
+- **Atari Jaguar**  
+  `./retro_achievements_hash_checker.sh atarijaguar /path/to/game.rom`
+- **Atari 7800**  
+  `./retro_achievements_hash_checker.sh atari7800 /path/to/game.rom`
+- **Atari Jaguar CD**  
+  `./retro_achievements_hash_checker.sh atarijaguar_cd /path/to/game.iso`
+- **Atari Lynx**  
+  `./retro_achievements_hash_checker.sh atarilynx /path/to/game.rom`
+- **Bandai WonderSwan**  
+  `./retro_achievements_hash_checker.sh wonderswan /path/to/game.rom`
+- **Bandai WonderSwan Color**  
+  `./retro_achievements_hash_checker.sh wonderswancolor /path/to/game.rom`
+- **ColecoVision**  
+  `./retro_achievements_hash_checker.sh colecovision /path/to/game.rom`
+- **Fairchild Channel F**  
+  `./retro_achievements_hash_checker.sh channelf /path/to/game.rom`
+- **GCE Vectrex**  
+  `./retro_achievements_hash_checker.sh vectrex /path/to/game.rom`
+- **Magnavox Odyssey²**  
+  `./retro_achievements_hash_checker.sh odyssey2 /path/to/game.rom`
+- **Mattel Intellivision**  
+  `./retro_achievements_hash_checker.sh intellivision /path/to/game.rom`
+- **Microsoft MSX / MSX2**  
+  `./retro_achievements_hash_checker.sh msx /path/to/game.dsk`  
+  `./retro_achievements_hash_checker.sh msx2 /path/to/game.dsk`
+- **NEC PC-8001 / PC-8801**  
+  `./retro_achievements_hash_checker.sh pc8001 /path/to/game.dsk`  
+  `./retro_achievements_hash_checker.sh pc8801 /path/to/game.dsk`
+- **NEC PC Engine / TurboGrafx-16 / SuperGrafx**  
+  `./retro_achievements_hash_checker.sh pc_engine /path/to/game.rom`
+- **NEC PC Engine CD / TurboGrafx-CD**  
+  `./retro_achievements_hash_checker.sh pc_engine_cd /path/to/game.iso`
+- **NEC PC-FX**  
+  `./retro_achievements_hash_checker.sh pc_fx /path/to/game.iso`
+- **NES / Famicom**  
+  `./retro_achievements_hash_checker.sh nes /path/to/game.nes`
+- **SNES / Super Famicom**  
+  `./retro_achievements_hash_checker.sh snes /path/to/game.smc`
+- **Famicom Disk System**  
+  `./retro_achievements_hash_checker.sh fds /path/to/game.fds`
+- **Game Boy**  
+  `./retro_achievements_hash_checker.sh gameboy /path/to/game.gb`
+- **Game Boy Advance**  
+  `./retro_achievements_hash_checker.sh gba /path/to/game.gba`
+- **Game Boy Color**  
+  `./retro_achievements_hash_checker.sh gbc /path/to/game.gbc`
+- **Pokémon Mini**  
+  `./retro_achievements_hash_checker.sh pokemon_mini /path/to/game.min`
+- **WASM-4**  
+  `./retro_achievements_hash_checker.sh wasm4 /path/to/game.wasm`
+- **Watara Supervision**  
+  `./retro_achievements_hash_checker.sh supervision /path/to/game.rom`
+- **Wellback Mega Duck**  
+  `./retro_achievements_hash_checker.sh megaduck /path/to/game.rom`
+- **Nintendo Virtual Boy**  
+  `./retro_achievements_hash_checker.sh virtual_boy /path/to/game.vboy`
+- **GameCube**  
+  `./retro_achievements_hash_checker.sh gamecube /path/to/game.iso`
+- **Nintendo 64**  
+  `./retro_achievements_hash_checker.sh n64 /path/to/game.z64`
+- **Nintendo DS**  
+  `./retro_achievements_hash_checker.sh nds /path/to/game.nds`
+- **PlayStation 1**  
+  `./retro_achievements_hash_checker.sh playstation /path/to/game.iso`
+- **PlayStation 2**  
+  `./retro_achievements_hash_checker.sh playstation2 /path/to/game.iso`
+- **PlayStation Portable (PSP)**  
+  `./retro_achievements_hash_checker.sh playstation_portable /path/to/game.iso`
+- **Sega Dreamcast**  
+  `./retro_achievements_hash_checker.sh dreamcast /path/to/game.iso`
+- **Sega Saturn**  
+  `./retro_achievements_hash_checker.sh saturn /path/to/game.iso`
+- **Sega CD**  
+  `./retro_achievements_hash_checker.sh sega_cd /path/to/game.iso`
+- **SNK Neo Geo CD**  
+  `./retro_achievements_hash_checker.sh neogeo_cd /path/to/game.iso`
+- **3DO Interactive Multiplayer**  
+  `./retro_achievements_hash_checker.sh 3do /path/to/game.iso`
+ 
